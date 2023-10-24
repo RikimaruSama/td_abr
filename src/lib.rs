@@ -16,7 +16,7 @@ struct Node {
 impl Tree {
     /// Returns an empty tree
     pub fn new() -> Self {
-        panic!("Not implemented")
+        Tree(None)
     }
 
     /// Returns a tree containing a single value

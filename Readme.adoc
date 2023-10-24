@@ -122,6 +122,16 @@ Pour représenter un arbre composé d'un unique nœud racine avec la valeur 12 n
 [start=2]
 . Modifiez l'exemple précédent pour rajouter un fils gauche (8) et un fils droit (27). Vérifiez que l'arbre s'affiche correctement.
 
+[source,rust]
+----
+    let t = Tree(Some(Box::new(Node {
+        value: 12,
+        left: Tree(Some(Box::new(Node{value: 8, left: Tree(None), right: Tree(None) }))),
+        right: Tree(Some(Box::new(Node{value: 27, left: Tree(None), right: Tree(None) }))),
+        })));
+println!("{:#?}", t);
+----
+
 === Implémentation de quelques constructeurs
 
 Comme nous venons de le voir, il est pour l'instant fastidieux de manipuler nos structures. Pour faciliter l'utilisation nous allons rajouter quelques constructeurs.
